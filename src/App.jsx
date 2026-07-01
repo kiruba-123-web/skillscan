@@ -1,0 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Result from "./Result";
+import History from "./History";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/result" element={<Result />} />
+
+<Route path="/history" element={<History />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;

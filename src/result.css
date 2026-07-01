@@ -1,0 +1,228 @@
+/* .result-page {
+  background: linear-gradient(to right, #e8f0ff, #f7e9ff);
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+/* NAVBAR */
+/* .navbar {
+  background: #0d1b3d;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 20px 20px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* CONTAINER */
+/* .result-container {
+  padding: 40px;
+  text-align: center;
+} */
+
+/* SCORE */
+/* .circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 12px solid #4caf50;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+/* SKILLS */
+/* .skills span {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin: 6px;
+} */
+
+/* GRID */
+/* .grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+} */
+
+/* .card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.success {
+  border: 2px solid #4caf50;
+} */
+
+/* .warning {
+  border: 2px solid #ff9800;
+}
+
+/* INSIGHT */
+/* .insight {
+  margin-top: 30px;
+  font-size: 16px;
+} */
+
+/* BUTTONS */
+/* .actions {
+  margin-top: 30px;
+} */ */
+/* 
+.download {
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  margin-right: 15px;
+} */
+
+/* .rescan {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #3b82f6;
+  background: transparent;
+} */ */ */
+
+
+/* PAGE BACKGROUND */
+.result-page {
+  background: linear-gradient(to right, #e8f0ff, #f7e9ff);
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #0d1b3d;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 20px 20px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* CONTAINER */
+.result-container {
+  padding: 40px;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* SCORE CIRCLE */
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 12px solid #4caf50;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SKILLS */
+.skills {
+  margin-top: 10px;
+}
+
+.skills span {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin: 6px;
+  font-size: 14px;
+}
+
+/* GRID LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* CARD STYLE */
+.card {
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* SUCCESS CARD */
+.success {
+  border: 2px solid #4caf50;
+}
+
+/* WARNING CARD */
+.warning {
+  border: 2px solid #ff9800;
+}
+
+/* AI INSIGHT */
+.insight {
+  margin-top: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* BUTTON SECTION */
+.actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* DOWNLOAD BUTTON */
+.download {
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESCAN BUTTON */
+.rescan {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #3b82f6;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* FILE NAME */
+.file {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}

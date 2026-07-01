@@ -1,0 +1,151 @@
+/* PAGE BACKGROUND */
+:root {
+  --primary-blue: #1E3A8A;
+  --secondary-blue: #2563EB;
+  --accent-cyan: #06B6D4;
+  --light-cyan: #67E8F9;
+  --background: #F0F9FF;
+  --text-dark: #0F172A;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+/* Gradient Option */
+/* Purple + Blue Theme */
+
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #eef2ff, #3e8fff);
+  font-family: sans-serif;
+}
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #eef2ff, #f3e8ff);
+  font-family: sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #0d1b3d;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* MAIN CONTAINER */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 60px;
+}
+
+/* LEFT IMAGE */
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.ai-img {
+  width: 400px;
+  max-width: 100%;
+}
+
+/* RIGHT CONTENT */
+.right {
+  flex: 1;
+}
+
+.right h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.right p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* UPLOAD BOX */
+.upload-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px dashed #aaa;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upload-box input {
+  margin-top: 10px;
+}
+
+.file-name {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* BUTTON */
+.btn {
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.analyze-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.analyze-btn.disabled {
+  background-color: #ff4d4d; /* Reddish to indicate a block */
+  color: white;
+}
+
+.cooldown-note {
+  margin-top: 15px;
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Add a pulse effect to the timer text */
+.analyze-btn:disabled:not(:contains("Analyzing")) {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
