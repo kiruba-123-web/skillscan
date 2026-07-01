@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Home.css";
+import "./home.css";
 import aiImage from "./assets/image1.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
