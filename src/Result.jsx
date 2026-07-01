@@ -378,7 +378,7 @@ function Result() {
           {/* ✅ FIXED BUTTON */}
           {id && (
             <a
-              href={`http://localhost:5000/api/resume/download/${id}`}
+              href={`https://skillscan-7.onrender.com/api/resume/download/${id}`}
               target="_blank"
               rel="noopener noreferrer"
             >

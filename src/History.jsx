@@ -11,7 +11,7 @@ function History() {
 
   const fetchHistory = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/resume/all");
+      const res = await axios.get("https://skillscan-7.onrender.com/api/resume/all");
       setResumes(res.data);
     } catch (err) {
       console.error("Error fetching history", err);
@@ -37,7 +37,7 @@ function History() {
 
               <div className="actions">
                 <a
-                  href={`http://localhost:5000/api/resume/download/${item._id}`}
+                  href={`https://skillscan-7.onrender.com/api/resume/download/${item._id}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

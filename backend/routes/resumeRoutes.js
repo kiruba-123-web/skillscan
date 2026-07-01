@@ -496,6 +496,8 @@ const pdfjsLib = require("pdfjs-dist/legacy/build/pdf.js");
 const PDFDocument = require("pdfkit");
 
 const Resume = require("../models/resume");
+console.log("OPENAI_API_KEY exists:", !!process.env.OPENAI_API_KEY);
+console.log("OPENAI_API_KEY value:", process.env.OPENAI_API_KEY?.slice(0,10));
 
 // ✅ OpenAI Init
 const OpenAI = require("openai").default;

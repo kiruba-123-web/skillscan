@@ -44,7 +44,7 @@ function Home() {
       formData.append("jobDescription", jobDescription); 
 
       const response = await axios.post(
-        "http://localhost:5000/api/resume/upload",
+        "https://skillscan-7.onrender.comapi/resume/upload",
         formData,
         {
           headers: {
