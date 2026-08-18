@@ -43,16 +43,15 @@ function Home() {
       // Append the Job Description to the payload
       formData.append("jobDescription", jobDescription); 
 
-      const response = await axios.post(
-        "https://skillscan-7.onrender.comapi/resume/upload",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data"
-          }
-        }
-      );
-
+     const response = await axios.post(
+  "https://skillscan-7.onrender.com/api/resume/upload",
+  formData,
+  {
+    headers: {
+      "Content-Type": "multipart/form-data"
+    }
+  }
+);
       console.log(response.data);
 
       navigate("/result", {
