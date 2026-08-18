@@ -43,16 +43,15 @@ function Home() {
       // Append the Job Description to the payload
       formData.append("jobDescription", jobDescription); 
 
-     const response = await axios.post(
-  "https://skillscan-7.onrender.com/api/resume/upload",
+const response = await axios.post(
+  "http://localhost:5000/api/resume/upload",
   formData,
   {
     headers: {
       "Content-Type": "multipart/form-data"
     }
   }
-);
-      console.log(response.data);
+);    console.log(response.data);
 
       navigate("/result", {
         state: {
@@ -138,121 +137,3 @@ function Home() {
 export default Home;
 
 
-// import { useState, useEffect } from "react";
-// import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// import "./Home.css";
-
-// function Home() {
-//   const [file, setFile] = useState(null);
-//   const [isLoading, setIsLoading] = useState(false);
-//   const navigate = useNavigate();
-
-//   // Initialize cooldown from localStorage (if exists)
-//   const [cooldownTime, setCooldownTime] = useState(() => {
-//     const savedTime = localStorage.getItem("cooldownExpiry");
-//     if (savedTime) {
-//       const remaining = Math.ceil((parseInt(savedTime) - Date.now()) / 1000);
-//       return remaining > 0 ? remaining : 0;
-//     }
-//     return 0;
-//   });
-
-//   // Handle the countdown logic
-//   useEffect(() => {
-//     let timer;
-//     if (cooldownTime > 0) {
-//       timer = setInterval(() => {
-//         setCooldownTime((prev) => {
-//           if (prev <= 1) {
-//             localStorage.removeItem("cooldownExpiry");
-//             return 0;
-//           }
-//           return prev - 1;
-//         });
-//       }, 1000);
-//     }
-//     return () => clearInterval(timer);
-//   }, [cooldownTime]);
-
-//   const handleFileChange = (e) => {
-//     setFile(e.target.files[0]);
-//   };
-
-//   const handleAnalyze = async (e) => {
-//     e.preventDefault();
-
-//     if (!file || cooldownTime > 0) return;
-
-//     setIsLoading(true);
-//     const formData = new FormData();
-//     formData.append("resume", file);
-
-//     try {
-//       // Ensure your backend URL matches your server.js port
-//       const response = await axios.post("http://localhost:5000/api/resume/upload", formData);
-      
-//       // Success! Clear any existing cooldowns
-//       localStorage.removeItem("cooldownExpiry");
-//       navigate("/result", { state: response.data });
-
-//     } catch (error) {
-//       console.error("Upload failed:", error);
-
-//       // Trigger 60-second cooldown on Rate Limit (429) or Server Error (500)
-//       if (error.response && (error.response.status === 429 || error.response.status === 500)) {
-//         const expiry = Date.now() + 60000;
-//         localStorage.setItem("cooldownExpiry", expiry.toString());
-//         setCooldownTime(60);
-//         alert("Server is busy. Cooldown activated for 60 seconds.");
-//       } else {
-//         alert("Something went wrong. Please check your connection.");
-//       }
-//     } finally {
-//       setIsLoading(false);
-//     }
-//   };
-
-//   return (
-//     <div className="home-container">
-//       <div className="upload-box">
-//         <h1>SkillScan AI</h1>
-//         <p>Optimize your resume with Gemini AI</p>
-        
-//         <input 
-//           type="file" 
-//           accept=".pdf" 
-//           onChange={handleFileChange} 
-//           id="file-upload"
-//           hidden
-//         />
-        
-//         <label htmlFor="file-upload" className="file-label">
-//           {file ? file.name : "Click to upload Resume (PDF)"}
-//         </label>
-
-//         <button 
-//           onClick={handleAnalyze} 
-//           disabled={isLoading || cooldownTime > 0 || !file}
-//           className={`analyze-btn ${cooldownTime > 0 ? "disabled" : ""}`}
-//         >
-//           {isLoading ? (
-//             "Analyzing..."
-//           ) : cooldownTime > 0 ? (
-//             `Cooldown: ${cooldownTime}s`
-//           ) : (
-//             "Analyze Resume"
-//           )}
-//         </button>
-
-//         {cooldownTime > 0 && (
-//           <p className="cooldown-note">
-//             Rate limit reached. Please wait for the timer to finish.
-//           </p>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Home;
